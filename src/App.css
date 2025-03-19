@@ -7,9 +7,35 @@
   /*font-family: 'Lexend Deca', sans-serif;*/
   font-family: "Urbanist", sans-serif;
 }
+body {
+  background: #fdf2ed;
+}
 
 /*// thapa technical SUBSCRIBE*/
 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 40px;
+}
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+.developer-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #68b984;
+}
 html {
   font-size: 62.5%;
 }

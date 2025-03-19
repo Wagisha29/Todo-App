@@ -6,8 +6,11 @@ const AddToDo = () => {
 
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleAddTodo(todo);
-    setTodo("");
+    if (todo.trim()) {
+      // Only add if todo is not empty or just whitespace
+      handleAddTodo(todo);
+      setTodo("");
+    }
   };
   return (
     <form onSubmit={handleFormSubmit}>
@@ -16,7 +19,9 @@ const AddToDo = () => {
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
-      <button type="submit">Add</button>
+      <button type="submit" disabled={!todo.trim()}>
+        Add
+      </button>
     </form>
   );
 };
